@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: url(./images/day-bg.jpg)no-repeat center center/cover;
+}
+
+.navbar{
+    height: 60px;
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom: 2px solid rgb(18, 123, 131);
+    background-color: white;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 50px;
+    margin-left: 20px;
+}
+
+#links{
+    padding-top: 10px;
+}
+
+#link{
+    text-decoration: none;
+    font-size: xx-large;
+    color: rgb(32, 172, 172);
+    padding-right: 60px;
+    padding-left: 20px;
+}
+
+#link:hover{
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.container-img{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+    max-width: 350px;
+    border-bottom: 2px solid white;
+    justify-content: space-between;
+} 
+
+.details{
+    padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#contimg{
+    width: 100px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.inbox{
+    width:100%;
+    max-width:400px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    gap:30px;
+    color: rgb(251, 252, 252);
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(20px);
+}
+
+#taskInput{
+    flex: 1;
+    height: 40px;
+    width: 230px;
+    padding-left: 20px;
+    border-radius: 20px;
+    border-color: rgb(32, 172, 172);
+}
+
+#taskInput::placeholder{
+    color: rgb(17, 90, 90);
+}
+
+#add-btn{
+    height: 40px;
+    width: 50px;
+    border-radius: 10px;
+    border-color: aqua;
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2 ease;
+    background-image: linear-gradient(40deg,rgb(32, 172, 172),rgb(106, 200, 243),rgb(32, 172, 172));
+}
+
+#add-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-image: linear-gradient(40deg,rgb(106,200,243),rgb(32,172,172),rgb(106,200,243));
+}
+
+.list-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#tasks-list{
+    width: 100%;
+}
+
+#tasks-list li{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+    background-color: white;
+    color: rgb(32,172,172);
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+
+#tasks-list li span{
+    flex: 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+
+#tasks-list li:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#tasks-list li .checkbox{
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 50%;
+    justify-content: center;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#tasks-list li .checkbox:checked::before{
+    content: '\2713';
+    color: white;
+    background-color: rgb(32,172,172);
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+#task-buttons{
+    display: flex;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.edit-btn{
+    width: 50px;
+    height: 25px;
+    padding: 2px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    border-color: yellow;
+    background-image: linear-gradient(90deg,yellow,rgb(240, 240, 93),yellow);
+}
+
+.edit-btn:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.delete-btn{
+    width: 50px;
+    height: 25px;
+    padding: 2px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    border-color: red;
+    background-image: linear-gradient(90deg,red,rgb(230, 86, 86),red);
+}
+
+.delete-btn:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 600px) {
+    .container{
+        margin: 0 20px;
+        padding: 0 20px;
+    }
+
+    .inbox{
+        font-size: 1rem;
+    }
+
+    #tasks-list{
+        font-size: 1rem;
+    }
+}
