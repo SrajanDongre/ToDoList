@@ -21,8 +21,8 @@ Deployment  GitHub Pages
 
 Clone the repository
 
-git clone https://github.com/SrajanDongre/todo-list-app.git
-cd todo-list-app
+git clone https://github.com/SrajanDongre/ToDoList.git
+cd ToDoList
 
 
 Install dependencies
