@@ -168,6 +168,11 @@ body{
     transition: all 0.2s ease;
 }
 
+#tasks-list li.completed span{
+    opacity: 0.5;
+    color: black;
+}
+
 #tasks-list li .checkbox:checked::before{
     content: '\2713';
     color: white;
@@ -195,6 +200,7 @@ body{
 }
 
 .edit-btn:hover{
+    transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -210,6 +216,7 @@ body{
 }
 
 .delete-btn:hover{
+    transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
